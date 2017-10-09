@@ -1,0 +1,147 @@
+#!/bin/bash
+
+
+
+
+
+  echo -e " _______   _______   ___  ___  _____  __ "
+echo  -e " / ___/ /  / __/ _ | / _ \/ _ )/  _/ |/ / "
+echo -e  "/ /__/ /__/ _// __ |/ , _/ _  |/ //    /  "
+echo  -e "\___/____/___/_/ |_/_/|_/____/___/_/|_/   "
+
+
+
+echo -e $BlueF"                          linux cleaning tool"
+
+cyan='\e[0;36m'
+green='\e[0;34m'
+okegreen='\033[92m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+BlueF='\e[1;34m'
+
+#Limpeza de Arquivos
+echo -e $yellow"Verificando e Ativando seu audio"
+echo "[+] Ativando áudio..."
+sleep 2
+systemctl --user enable pulseaudio && systemctl --user start pulseaudio
+if [ $? == 0 ];
+then
+	echo "[+] O áudio foi ativado com Sucesso!"
+else
+	echo "[!] Não foi possível ativar o áudio!"
+fi
+#VERIFICAR INTERNET
+echo -e $yellow"[+] Verificando conexao com a Internet..."
+sleep 0.15
+echo -e $yellow" um momento!\n"
+ping -c 1 google.com &> /dev/null
+if [ $? -gt 0 ]; then
+	ping -c 1 uol.com.br &> /dev/null
+	if [ $? -gt 0 ]; then
+		echo $yellow"Verifique sua conexao..."
+		echo $yellow""
+		exit 1
+	fi
+fi
+echo -e $yellow"[+] Internet OK!\n"
+sleep 0.15
+echo ""
+echo ""
+echo "[+] Limpando a pasta TMP"
+sudo rm -rf /var/tmp/*
+echo ""
+echo ""
+echo "[+] Limpando logs (access.log)"
+## rm -rf /var/log/squid/*
+echo ""
+echo ""
+echo "[+] Procurando arquivos corrompidos"
+sudo apt-get check
+echo ""
+echo ""
+echo "[+] Limpeza do Cache do Firefox"
+kdialog --title "Firefox" --yesno "CLEARBIN: \nVocê deseja limpar o cache do Firefox para o usuário $USER?"
+
+if [ $? = 0 ]; then
+cd ~
+cd .mozilla/firefox/def*
+rm -f Cache/*
+clear
+else
+clear
+echo "Pulando esta etapa..."
+fi
+echo "[+] Exclusão de cache inuteis do sistema . Cópias de atualizações"
+sudo apt-get clean -y
+kdialog --title "APT-GET" --yesno "CLEARBIN: A cada programa instalado o apt-get vai acumulando pacotes no cache, estes pacotes a maioria das vezes não são mais necessários e são mantidos para facilitar a instalação de um programa já baixado, O Problema é que ocupam muito espaço.\nNota: Este comando requer o SUDO ativo para o usuário $USER, caso não esteja disponivel o comando não será executado. \nEscolhendo SIM todos os pacotes no cache do APT-GET serão apagados, \nEscolhendo NÃO será oferecida a posibilidade de apagar apenas pacotes que foram atualizados. \nVocê deseja apagar todo o cache do APT-GET
+"
+
+if [ $? = 0 ]; then
+sudo apt-get clean -y
+sudo rm -f /var/cache/apt/archives/*
+sudo rm -f /var/cache/apt/archives/partial/*
+else
+clear
+echo "Pulando esta etapa..."
+clear
+fi
+
+kdialog --title "APT-GET" --yesno "CLEARBIN: Deseja excluir apenas os pacotes atualizados e/ou obsoletos do APT-GET?"
+
+if [ $? = 0 ]; then
+sudo apt-get autoclean -y
+else
+clear
+echo "Pulando esta etapa..."
+clear
+fi
+echo ""
+echo ""
+echo "[+] Exclusão de programas que não estão sendo mais utilizados pelo Sistema"
+sudo apt-get autoremove -y
+echo ""
+echo ""
+echo "[+] Fazendo uma limpeza da memória cache"
+# echo 3 > /proc/sys/vm/drop_caches
+# sysctl -w vm.drop_caches=3
+echo ""
+echo ""
+echo "[+] Reparando pacotes quebrados durante a atualização"
+sudo dpkg --configure -a
+echo ""
+echo ""
+clear
+echo " limpeza Realizada com Sucesso!"
+echo "                     _______   _______   ___  ___  _____  __ "
+echo "                     / ___/ /  / __/ _ | / _ \/ _ )/  _/ |/ /"
+echo "                    / /__/ /__/ _// __ |/ , _/ _  |/ //    /"
+echo "                    \___/____/___/_/ |_/_/|_/____/___/_/|_/ "
+echo -e $"                             linux cleaning tool  "
+echo ''
+echo -e $lightgreen'-- -- +=[ 2016-2017 | twitter.com/And3r66 |facebook.com/and3r66 '
+echo -e $lightgreen'-- -- +=[ Author: Anderson.B Silva < And3R66 >  ]=+ -- -- '
+echo ""
+echo -e $BlueF "CLEARBIN REALIZOU:"
+echo ""
+echo "-Verificou a sua Conectividade Com a Internet"
+echo "-Limpou a pasta TMP"
+echo "-Limpou Logs"
+echo "-limpou Cache do Firefox"
+echo "-Procurou arquivos corrompidos"
+echo "-Excluiu cache inuteis do sistema"
+echo "-Excluiu programas que não estavam mais sendo ultilizados pelo sistema"
+echo "-Excluiu Arquivos duplicados"
+echo "-Fez uma limpeza da memória cache sem que você precisa-se reiniciar o computador"
+echo "-Reparou pacotes quebrados durante a atualizações"
+
+echo -e $okegreen "*** Seu Sistema ***"
+cat /etc/os-release
+echo -e $red"================================================================================"
+
+echo -e $red"INFORMAÇÕES:"
+echo -e $red"CLEARBIN V.1.0"
+echo -e $red" Duvidas? entre em contato: tiedition2017@gmail.com"
+echo -e "================================================================================"
