@@ -7,3 +7,15 @@ sudo chmod 777 clearbin2.sh
 after: sudo ./clearbin2.sh $ 
 
 <img src="https://raw.githubusercontent.com/And3R66/clearbin/master/Screenshots/Screenshot01.png">
+
+# :exclamation: Requirements
+
+<ul>
+<li>
+<p>A linux operating system.</p>
+</li>
+<li>
+<p>Based on Debian
+</p>
+</li>
+</ul>
