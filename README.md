@@ -21,3 +21,5 @@ Clearbin is a Developed Tool in Programming with Shell Script, in order to alway
 </p>
 </li>
 </ul>
+# :book:The Importance of an Optimized System
+Sabemos que o Debian é muito tradicional no que se refere a estabilidade de seus pacotes
