@@ -4,6 +4,6 @@ Clearbin is a Developed Tool in Programming with Shell Script, in order to alway
 # installation
 For distributions based on Debian:
 sudo chmod 777 clearbin2.sh 
-after: sudo ./clearbin2.sh 
+after: sudo ./clearbin2.sh $ 
 
 <img src="https://raw.githubusercontent.com/And3R66/clearbin/master/Screenshots/Screenshot01.png">
