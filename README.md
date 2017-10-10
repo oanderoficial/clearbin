@@ -25,6 +25,6 @@ Clearbin is a Developed Tool in Programming with Shell Script, in order to alway
 </font></font></h2>
 we like to inform the new GNU / Linux users that there is no hard disk defragmentation, nor cleaning and defragmenting the system "registry" Because it is a different operating system. But There Are Several Ways To Clean Up Useless System Files, And Clearbin Is A Delas!
 # Disclaimer
-Note: modifications, changes are acceptable provided, however, that you retain the author's name
+modifications, changes are acceptable provided, however, that you retain the author's name
 
 
