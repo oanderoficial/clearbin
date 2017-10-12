@@ -121,7 +121,7 @@ echo "                    / /__/ /__/ _// __ |/ , _/ _  |/ //    /"
 echo "                    \___/____/___/_/ |_/_/|_/____/___/_/|_/ "
 echo -e $"                             linux cleaning tool  "
 echo ''
-echo -e $lightgreen'-- -- +=[ 2016-2017 | twitter.com/And3r66 |facebook.com/and3r66 '
+echo -e $lightgreen'-- -- +=[ 2017-2018 | twitter.com/And3r66 |facebook.com/and3r66 '
 echo -e $lightgreen'-- -- +=[ Author: Anderson.B Silva < And3R66 >  ]=+ -- -- '
 echo ""
 echo -e $BlueF "CLEARBIN REALIZOU:"
