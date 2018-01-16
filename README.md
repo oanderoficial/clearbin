@@ -8,7 +8,7 @@ Clearbin is a Developed Tool in Programming with Shell Script, in order to alway
 <li><code>chmod a+x clearbin2.sh</code></li>
 <li><code>sudo ./clearbin2.sh ou sudo su ./clearbin2.sh</code></li>
 </ol>
-<img src="https://raw.githubusercontent.com/And3R66/clearbin/master/Screenshots/Screenshot01.png">
+<img src="https://raw.githubusercontent.com/And3R66/clearbin/master/Screenshots/ATUALIZA%C3%87%C3%83O%20.png">
 
 # :exclamation: Requirements
 
