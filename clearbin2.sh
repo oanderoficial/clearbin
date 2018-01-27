@@ -63,8 +63,7 @@ sudo apt-get check
 echo ""
 echo ""
 echo "[+] Limpeza do Cache do Firefox"
-kdialog --title "Firefox" --yesno "CLEARBIN: \nVocê deseja limpar o cache do Firefox para o usuário $USER?"
-
+""
 if [ $? = 0 ]; then
 cd ~
 cd .mozilla/firefox/def*
@@ -76,9 +75,7 @@ echo "Pulando esta etapa..."
 fi
 echo "[+] Exclusão de cache inuteis do sistema . Cópias de atualizações"
 sudo apt-get clean -y
-kdialog --title "APT-GET" --yesno "CLEARBIN: A cada programa instalado o apt-get vai acumulando pacotes no cache, estes pacotes a maioria das vezes não são mais necessários e são mantidos para facilitar a instalação de um programa já baixado, O Problema é que ocupam muito espaço.\nNota: Este comando requer o SUDO ativo para o usuário $USER, caso não esteja disponivel o comando não será executado. \nEscolhendo SIM todos os pacotes no cache do APT-GET serão apagados, \nEscolhendo NÃO será oferecida a posibilidade de apagar apenas pacotes que foram atualizados. \nVocê deseja apagar todo o cache do APT-GET
-"
-
+""
 if [ $? = 0 ]; then
 sudo apt-get clean -y
 sudo rm -f /var/cache/apt/archives/*
@@ -88,8 +85,6 @@ clear
 echo "Pulando esta etapa..."
 clear
 fi
-
-kdialog --title "APT-GET" --yesno "CLEARBIN: Deseja excluir apenas os pacotes atualizados e/ou obsoletos do APT-GET?"
 
 if [ $? = 0 ]; then
 sudo apt-get autoclean -y
