@@ -136,7 +136,3 @@ echo -e $okegreen "*** Seu Sistema ***"
 cat /etc/os-release
 echo -e $red"================================================================================"
 
-echo -e $red"INFORMAÇÕES:"
-echo -e $red"CLEARBIN V.1.0"
-echo -e $red" Duvidas? entre em contato: tiedition2017@gmail.com"
-echo -e "================================================================================"
