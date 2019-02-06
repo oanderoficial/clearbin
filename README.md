@@ -3,7 +3,7 @@ Clearbin is a Developed Tool in Programming with Shell Script, in order to alway
 
 #  installation
 <ol>
-<li><code>git clone https://github.com/And3R66/clearbin.git</code></li>
+<li><code>git clone https://github.com/oandersonbsilva/clearbin.git</code></li>
 <li><code>cd clearbin</code></li>
 <li><code>chmod a+x clearbin2.sh</code></li>
 <li><code>sudo ./clearbin2.sh ou sudo su ./clearbin2.sh</code></li>
