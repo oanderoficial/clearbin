@@ -114,9 +114,10 @@ echo "                     _______   _______   ___  ___  _____  __ "
 echo "                     / ___/ /  / __/ _ | / _ \/ _ )/  _/ |/ /"
 echo "                    / /__/ /__/ _// __ |/ , _/ _  |/ //    /"
 echo "                    \___/____/___/_/ |_/_/|_/____/___/_/|_/ "
-echo -e $"                             linux cleaning tool  "
+echo -e $"                             linux cleaning tool  "  
+echo -e                                  "V-1.1-Cripto"
 echo ''
-echo -e $lightgreen'-- -- +=[ 2017-2018 | twitter.com/oandersonbsilva |@StarkSec '
+echo -e $lightgreen'-- -- +=[ 2017-2019 | twitter.com/oandersonbsilva |@StarkSec '
 echo -e $lightgreen'-- -- +=[ Author: Anderson.B Silva < Cripto >  ]=+ -- -- '
 echo ""
 echo -e $BlueF "CLEARBIN REALIZOU:"
