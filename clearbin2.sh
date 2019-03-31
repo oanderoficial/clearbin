@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#Acesso ROOT. 
+
+[ $UID -ne '0' ] && { echo "Necessário ter Acesso ROOT."; exit 1 ;}
+
   echo -e " _______   _______   ___  ___  _____  __ "
 echo  -e " / ___/ /  / __/ _ | / _ \/ _ )/  _/ |/ / "
 echo -e  "/ /__/ /__/ _// __ |/ , _/ _  |/ //    /  "
@@ -47,7 +51,7 @@ sleep 0.15
 echo ""
 echo ""
 echo "[+] Limpando a pasta TMP"
-sudo rm -rf /var/tmp/*
+rm -rf /var/tmp/*
 echo ""
 echo ""
 echo "[+] Limpando logs (access.log)"
@@ -55,7 +59,7 @@ rm -rf /var/log/squid/*
 echo ""
 echo ""
 echo "[+] Procurando arquivos corrompidos"
-sudo apt-get check
+apt-get check
 echo ""
 echo ""
 echo "[+] Limpeza do Cache do Firefox"
@@ -70,12 +74,12 @@ clear
 echo "Pulando esta etapa..."
 fi
 echo "[+] Exclusão de cache inuteis do sistema . Cópias de atualizações"
-sudo apt-get clean -y
+apt-get clean -y
 ""
 if [ $? = 0 ]; then
-sudo apt-get clean -y
-sudo rm -f /var/cache/apt/archives/*
-sudo rm -f /var/cache/apt/archives/partial/*
+apt-get clean -y
+rm -f /var/cache/apt/archives/*
+rm -f /var/cache/apt/archives/partial/*
 else
 clear
 echo "Pulando esta etapa..."
@@ -83,7 +87,7 @@ clear
 fi
 
 if [ $? = 0 ]; then
-sudo apt-get autoclean -y
+apt-get autoclean -y
 else
 clear
 echo "Pulando esta etapa..."
@@ -92,7 +96,7 @@ fi
 echo ""
 echo ""
 echo "[+] Exclusão de programas que não estão sendo mais utilizados pelo Sistema"
-sudo apt-get autoremove -y
+apt-get autoremove -y
 echo ""
 echo ""
 echo "[+] Fazendo uma limpeza da memória cache"
@@ -101,7 +105,7 @@ sysctl -w vm.drop_caches=3
 echo ""
 echo ""
 echo "[+] Reparando pacotes quebrados durante a atualização"
-sudo dpkg --configure -a
+dpkg --configure -a
 echo ""
 echo ""
 clear
