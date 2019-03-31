@@ -1,8 +1,4 @@
-#!/bin/bash
-
-
-
-
+#!/usr/bin/env bash
 
   echo -e " _______   _______   ___  ___  _____  __ "
 echo  -e " / ___/ /  / __/ _ | / _ \/ _ )/  _/ |/ / "
@@ -55,7 +51,7 @@ sudo rm -rf /var/tmp/*
 echo ""
 echo ""
 echo "[+] Limpando logs (access.log)"
-## rm -rf /var/log/squid/*
+rm -rf /var/log/squid/*
 echo ""
 echo ""
 echo "[+] Procurando arquivos corrompidos"
@@ -100,8 +96,8 @@ sudo apt-get autoremove -y
 echo ""
 echo ""
 echo "[+] Fazendo uma limpeza da memória cache"
-# echo 3 > /proc/sys/vm/drop_caches
-# sysctl -w vm.drop_caches=3
+echo 3 > /proc/sys/vm/drop_caches
+sysctl -w vm.drop_caches=3
 echo ""
 echo ""
 echo "[+] Reparando pacotes quebrados durante a atualização"
