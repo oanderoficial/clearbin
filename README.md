@@ -1,6 +1,6 @@
-[![Versão](https://img.shields.io/badge/vers%C3%A3o-1.1-sucecess.svg)](https://github.com/oandersonbsilva/wiresec/blob/master/wiresec.sh)
-[![Plataformas](https://img.shields.io/badge/Plataformas-Linux%20x64%20%7C%20Linux%20x86-inactive.svg)](https://github.com/oandersonbsilva/wiresec)
-[![user](https://img.shields.io/badge/user-ROOT-red.svg)](https://github.com/oandersonbsilva/wiresec)
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-1.1-sucecess.svg)](https://github.com/oandersonbsilva/clearbin)
+[![Plataformas](https://img.shields.io/badge/Plataformas-Linux%20x64%20%7C%20Linux%20x86-inactive.svg)](https://github.com/oandersonbsilva/clearbin)
+[![user](https://img.shields.io/badge/user-ROOT-red.svg)](https://github.com/oandersonbsilva/clearbin)
 
 <img src="https://raw.githubusercontent.com/And3R66/clearbin/master/logo3.png">
 Clearbin is a Developed Tool in Programming with Shell Script, in order to always keep the work environment clean in a simple and easy way! Clearbin performs tasks like: clear cache, search and repair corrupted files,clears logs plus other extremely important functions for your system.
