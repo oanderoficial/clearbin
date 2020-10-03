@@ -32,3 +32,6 @@ Versão Anterior 📦<kbd>V 1.0<kbd>
 
 we like to inform the new GNU / Linux users that there is no hard disk defragmentation, nor cleaning and defragmenting the system "registry" Because it is a different operating system. But There Are Several Ways To Clean Up Useless System Files, And Clearbin Is A Delas!
 
+# Minhas Redes
+<code><img height="100" width="100" src="https://raw.githubusercontent.com/oandersonbsilva/oandersonbsilva/master/code.png"></code>
+
