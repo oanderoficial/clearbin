@@ -10,7 +10,7 @@ Versão Anterior 📦<kbd>V 1.0<kbd>
   
 #  installation!
 <ol>
-<li><code>git clone https://github.com/oandersonbsilva/clearbin.git</code></li>
+<li><code>git clone https://github.com/bitcoinander/clearbin.git</code></li>
 <li><code>cd clearbin</code></li>
 <li><code>chmod a+x clearbin2.sh</code></li>
 <li><code> ./clearbin2.sh </code></li>
