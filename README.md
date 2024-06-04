@@ -3,12 +3,12 @@
 [![user](https://img.shields.io/badge/user-ROOT-red.svg)](https://github.com/oandersonbsilva/clearbin)
 
 <img src="https://raw.githubusercontent.com/And3R66/clearbin/master/logo3.png">
-Clearbin is a Developed Tool in Programming with Shell Script, in order to always keep the work environment clean in a simple and easy way! Clearbin performs tasks like: clear cache, search and repair corrupted files,clears logs plus other extremely important functions for your system.
+<strong> Limpeza geral do sistema Linux, otimizando seu desempenho e liberando espaço em disco. O script se destaca por ser abrangente e fácil de usar, mesmo para usuários iniciantes em Linux.</strong>
 
 
 Versão Anterior 📦<kbd>V 1.0<kbd> 
   
-#  installation!
+# Instalação:
 <ol>
 <li><code>git clone https://github.com/bitcoinander/clearbin.git</code></li>
 <li><code>cd clearbin</code></li>
@@ -17,19 +17,38 @@ Versão Anterior 📦<kbd>V 1.0<kbd>
 </ol>
 <img src="https://raw.githubusercontent.com/And3R66/clearbin/master/Screenshots/ATUALIZA%C3%87%C3%83O%20.png">
 
-# :exclamation: Requirements
+# Necessário:
 
 <ul>
 <li>
-<p>A linux operating system.</p>
+<p>linux operating system.</p>
 </li>
 <li>
 <p>Based on Debian
 </p>
 </li>
 </ul>
-<h2> !</h2>
-
-we like to inform the new GNU / Linux users that there is no hard disk defragmentation, nor cleaning and defragmenting the system "registry" Because it is a different operating system. But There Are Several Ways To Clean Up Useless System Files, And Clearbin Is A Delas!
 
 
+# Funcionalidades:
+
+- Verificação a Ativação do Áudio:
+  - O script verifica se o serviço de áudio está ativo e o ativa, se necessário.
+- Verificação da Conexão com a Internet:
+  - O script verifica a conectividade com a internet antes de prosseguir com as tarefas de limpeza.
+- Limpeza da Pasta TMP:
+  - Remove todos os arquivos da pasta /var/tmp, que geralmente armazena arquivos temporários.
+- Limpeza de Logs:
+  - Remove os logs do Squid, liberando espaço em disco.
+- Verificação de Arquivos Corrompidos:
+  - Utiliza o comando apt-get check para verificar se há arquivos corrompidos no sistema.
+- Limpeza do Cache do Firefox:
+  - Remove o cache do Firefox, caso o navegador esteja instalado.
+- Remoção de Cache Inútil do Sistema:
+  - Executa os comandos apt-get clean e rm -f para remover arquivos de cache desnecessários do sistema.
+- Desinstalação de Programas Não Utilizados:
+  - Utiliza o comando apt-get autoremove para remover programas desnecessários e liberar espaço em disco.
+- Limpeza da Memória Cache:
+  - Grava o valor 3 no arquivo /proc/sys/vm/drop_caches para liberar memória cache sem a necessidade de reinicialização do sistema.
+- Reparo de Pacotes Quebrados:
+  - Utiliza o comando dpkg --configure -a para reparar pacotes quebrados durante atualizações.
