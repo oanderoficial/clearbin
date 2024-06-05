@@ -15,7 +15,8 @@ Versão Anterior 📦<kbd>V 1.0<kbd>
 <li><code>chmod a+x clearbin2.sh</code></li>
 <li><code> ./clearbin2.sh </code></li>
 </ol>
-<img src="https://raw.githubusercontent.com/And3R66/clearbin/master/Screenshots/ATUALIZA%C3%87%C3%83O%20.png">
+
+![image](https://github.com/oanderoficial/clearbin/assets/32654298/0d93317f-ef95-40ce-a539-f49fded95865)
 
 # Necessário:
 
